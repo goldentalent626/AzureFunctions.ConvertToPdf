@@ -1,20 +1,35 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# AzureFunctions.ConvertToPdf
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Introduction
+AzureFunctions.ConvertToPdf is a .NET 8 Azure Function that automates the conversion of Word documents stored in SharePoint Online document libraries to PDF format using Microsoft Graph API. The converted PDFs are then uploaded to a specified target library or folder within SharePoint. This solution is ideal for organizations looking to streamline document workflows and leverage serverless cloud automation.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Getting Started
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+### Installation
+1. Clone the repository to your local machine.
+2. Ensure you have the .NET 8 SDK installed.
+3. Configure your Azure environment with the necessary resources:
+   - Azure Function App
+   - Azure Key Vault (for certificate storage)
+   - Azure Storage Account
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### Software Dependencies
+- .NET 8
+- Microsoft.Azure.Functions.Worker
+- PnP.Core SDK
+- Microsoft.Identity.Web
+- Microsoft.Extensions.Azure
+- Application Insights (for telemetry)
+
+### Configuration
+Update the `AzureFunctionSettings` section in your configuration (e.g., `local.settings.json` or environment variables) with:
+- `ClientId`, `TenantId`, `SiteUrl`, `TenantDomain`
+- Certificate details: `CertificateThumbprint`, `KeyVaultUrl`, `KeyVaultCertName`
+- `AzureWebJobsStorage` connection string
+
+### API Reference
+
+#### ConvertToPdf Function
+**Endpoint:** `POST /api/ConvertToPdf`
+
+**Request Body:**
