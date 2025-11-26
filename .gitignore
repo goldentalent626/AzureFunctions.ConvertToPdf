@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AzureFunctions.ConvertToPdf/Properties/ServiceDependencies
+/AzureFunctions.ConvertToPdf/Properties/PublishProfiles
+/Visual Studio 2022/Visualizers
+/AzureFunctions.ConvertToPdf/Properties/serviceDependencies.dokrates-functions-prod - Zip Deploy.json
+/AzureFunctions.ConvertToPdf/Properties/serviceDependencies.dokrates-functions-test - Zip Deploy1.json
+/AzureFunctions.ConvertToPdf/Properties/serviceDependencies.json
+/.vs

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AzureFunctions.ConvertToPdf": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7226",
+      "launchBrowser": false
+    }
+  }
+}
